@@ -34,7 +34,11 @@ O `TeX Live` é uma distribuição abrangente e amplamente utilizada do sistema 
 
 Você pode instalar o `Tex Live` no `Linux Ubuntu` usando o gerenciador de pacotes `apt`. Aqui está um guia passo a passo:
 
-1. Abra o `Terminal Emulator`. Você pode fazer isso pressionando: `Ctrl + Alt + T`
+1. Abrir o `Terminal Emulator`. Você pode fazer isso pressionando:
+
+    ```bash
+    Ctrl + Alt + T
+    ```
 
 
 2. Certifique-se de que seu sistema esteja limpo e atualizado.
@@ -87,11 +91,19 @@ Você pode instalar o `Tex Live` no `Linux Ubuntu` usando o gerenciador de pacot
     sudo apt full-upgrade -y
     ```
 
-3. **Instale o `Tex Live`:** Agora você pode instalar o `Tex Live` executando o seguinte comando: `sudo apt install texlive-full -y`
+3. **Instale o `Tex Live`:** Agora você pode instalar o `Tex Live` executando o seguinte comando:
+
+    ```bash
+    sudo apt install texlive-full -y
+    ```
 
 - Isso instalará o `Tex Live` completo, que inclui uma ampla variedade de pacotes e bibliotecas para a criação de documentos `LaTeX`.
 
-4. **Verifique a instalação:** Depois que a instalação estiver concluída, você pode verificar se o `Tex Live` foi instalado corretamente executando o seguinte comando: `tex --version`
+4. **Verifique a instalação:** Depois que a instalação estiver concluída, você pode verificar se o `Tex Live` foi instalado corretamente executando o seguinte comando:
+
+    ```bash
+    tex --version
+    ```
 
 - Isso deve exibir informações sobre a versão do `Tex Live` instalada.
 
@@ -102,11 +114,15 @@ Agora você tem o `Tex Live` instalado no seu sistema `Linux Ubuntu` e pode come
 
 Para configurar/instalar/usar o `Tex Live` no `Linux Ubuntu` sem precisar digitar linha por linha, você pode seguir estas etapas:
 
-1. Abra o `Terminal Emulator`. Você pode fazer isso pressionando: `Ctrl + Alt + T`
+1. Abrir o `Terminal Emulator`. Você pode fazer isso pressionando:
+
+    ```bash
+    Ctrl + Alt + T
+    ```
 
 2. Digite o seguinte comando e pressione `Enter`:
 
-    ```
+    ```bash
     sudo apt clean
     sudo apt autoclean
     sudo apt autoremove -y
@@ -120,11 +136,13 @@ Para configurar/instalar/usar o `Tex Live` no `Linux Ubuntu` sem precisar digita
     ```
 
 
-## 2. Instalar pacote pelo `Terminal Emulator`
+## 2. Instalar pacote do `LaTeX` pelo `Terminal Emulator`
+
+Para instalar um pacote do `LaTeX` pelo `Terminal Emulator`
 
 ### 2.1 Como descobrir qual pacote `apt` fornece `<nome_do_pacote>.sty`
 
-1. Abra um `Terminal Emulator` e execute:
+1. Abrir um `Terminal Emulator` e execute:
 
     ```bash
     sudo apt update
@@ -135,7 +153,7 @@ Para configurar/instalar/usar o `Tex Live` no `Linux Ubuntu` sem precisar digita
 2. Procure pelo arquivo `<nome_do_pacote>.sty` via `apt-file` ou `apt-cache`. Se você ainda não tiver o `apt-file` instalado, faça:
 
     ```bash
-    sudo apt install apt-file
+    sudo apt install apt-file -y
     sudo apt-file update
     ```
 
@@ -160,7 +178,7 @@ Para configurar/instalar/usar o `Tex Live` no `Linux Ubuntu` sem precisar digita
 
     ```bash
     sudo apt update
-    sudo apt install texlive-latex-extra
+    sudo apt install texlive-latex-extra -y
     ```
 
     Após isso, o arquivo `<nome_do_pacote>.sty` estará instalado na árvore do `TeX Live` do sistema (em `/usr/share/texlive/...`) e o `LaTeX` passará a encontrá-lo normalmente.
@@ -168,7 +186,7 @@ Para configurar/instalar/usar o `Tex Live` no `Linux Ubuntu` sem precisar digita
 2. Se você quiser garantir que outros pacotes comuns de `LaTeX` também estejam presentes, pode instalar ainda:
 
     ```bash
-    sudo apt install texlive-science texlive-fonts-recommended texlive-latex-recommended
+    sudo apt install texlive-science texlive-fonts-recommended texlive-latex-recommended -y
     ```
 
     Mas, no mínimo, para resolver o erro do `<nome_do_pacote>.sty`, precise apenas de:
@@ -180,9 +198,7 @@ Para configurar/instalar/usar o `Tex Live` no `Linux Ubuntu` sem precisar digita
 
 ### 2.3 Testar se o `tlmgr` está disponível 
 
-1. **Testar se o `tlmgr` está disponível**
-
-    No `Terminal Emulator`, digite:
+1. **Testar se o `tlmgr` está disponível**: No `Terminal Emulator`, digite:
 
     ```bash
     tlmgr --version
@@ -194,9 +210,7 @@ Para configurar/instalar/usar o `Tex Live` no `Linux Ubuntu` sem precisar digita
 
     O diretório bin do `TeX Live` não esteja no seu `$PATH`.
 
-2. **Procurar por um pacote específico**
-
-    Suponha que você queira saber se o pacote que oferece, por exemplo, o `algorithm.sty` está presente. No `Terminal Emulator`, execute:
+2. **Procurar por um pacote específico**: Suponha que você queira saber se o pacote que oferece, por exemplo, o `algorithm.sty` está presente. No `Terminal Emulator`, execute:
 
     ```bash
     tlmgr search --file algorithm.sty
@@ -217,9 +231,7 @@ Para configurar/instalar/usar o `Tex Live` no `Linux Ubuntu` sem precisar digita
 
     ou, caso não esteja instalado localmente, apenas exibirá a referência ao repositório _online_.
 
-3. **Verificar informação sobre um pacote**
-
-    Se você já sabe o nome aproximado do pacote (por exemplo, `“algorithms”`), pode rodar:
+3. **Verificar informação sobre um pacote**: Se você já sabe o nome aproximado do pacote (por exemplo, `“algorithms”`), pode rodar:
 
     ```bash
     tlmgr info algorithms
@@ -227,25 +239,17 @@ Para configurar/instalar/usar o `Tex Live` no `Linux Ubuntu` sem precisar digita
     
     Isso mostra detalhes como versão instalada, descrição e nome completo do pacote no repositório `TeX Live`.
 
-4. **Instalar o pacote faltante**
-
-    Se ao buscar (`“search”`) você descobriu que o pacote que oferece `algorithm.sty` é o `algorithms`, basta rodar:
+4. **Instalar o pacote faltante**: Se ao buscar (`“search”`) você descobriu que o pacote que oferece `algorithm.sty` é o `algorithms`, basta rodar:
 
     ```bash
     sudo tlmgr install algorithms
-    ```
-
-    ou, se você estiver em um sistema sem `sudo`, apenas:
-
-    ```bash
-    tlmgr install algorithms
     ```
 
 Após isso, o `TeX Live Manager` resolverá dependências e fará o _download_/instalação. Quando terminar, o `algorithm.sty` estará disponível para qualquer documento.
 
 ## Referências
 
-[1] OPEN AI. ***Instalar o tex live no linux ubuntu.*** Disponível em: <https://chat.openai.com/c/5341e112-5d65-410b-bec5-00b9a61a6650> (texto adaptado). ChatGPT. Acessado em: 29/09/2023 18:56.
+[1] OPEN AI. ***Instalar o `tex live` no `linux ubuntu` pelo `terminal emulator`.*** Disponível em: <https://chat.openai.com/c/5341e112-5d65-410b-bec5-00b9a61a6650> (texto adaptado). ChatGPT. Acessado em: 29/09/2023 18:56.
 
 [2] OPEN AI. ***Vs code: editor popular.*** Disponível em: <https://chat.openai.com/c/b640a25d-f8e3-4922-8a3b-ed74a2657e42> (texto adaptado). ChatGPT. Acessado em: 14/11/2023 18:56.
 
