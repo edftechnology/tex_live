@@ -132,6 +132,11 @@ Para configurar/instalar/usar o `Tex Live` no `Linux Ubuntu` sem precisar digita
     sudo apt list --upgradable
     sudo apt full-upgrade -y
     sudo apt install texlive-full -y
+    sudo apt install apt-file -y
+    sudo apt-file update
+    sudo apt install texlive-latex-extra -y
+    sudo apt install texlive-science texlive-fonts-recommended texlive-latex-recommended -y
+    tlmgr --version
     tex --version
     ```
 
