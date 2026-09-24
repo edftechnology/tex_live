@@ -254,7 +254,14 @@ Após isso, o `TeX Live Manager` resolverá dependências e fará o _download_/i
 
 ## Referências
 
-[1] OPEN AI. ***Instalar o `tex live` no `linux ubuntu` pelo `terminal emulator`.*** Disponível em: <https://chat.openai.com/c/5341e112-5d65-410b-bec5-00b9a61a6650> (texto adaptado). ChatGPT. Acessado em: 29/09/2023 18:56.
+[1] OPEN AI.
+**Instalar o `tex live` no `linux ubuntu` pelo `terminal emulator`.**
+Disponível em: <https://chat.openai.com/c/5341e112-5d65-410b-bec5-00b9a61a6650> (texto adaptado). 
+ChatGPT.
+Acessado em: 29/09/2023 18:56.
 
-[2] OPEN AI. ***Vs code: editor popular.*** Disponível em: <https://chat.openai.com/c/b640a25d-f8e3-4922-8a3b-ed74a2657e42> (texto adaptado). ChatGPT. Acessado em: 14/11/2023 18:56.
-
+[2] OPEN AI.
+**Vs code: editor popular.**
+Disponível em: <https://chat.openai.com/c/b640a25d-f8e3-4922-8a3b-ed74a2657e42> (texto adaptado).
+ChatGPT.
+Acessado em: 14/11/2023 18:56.
